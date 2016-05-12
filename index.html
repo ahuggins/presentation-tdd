@@ -17,15 +17,61 @@ class: center, middle, inverse
 ### What's the big stink?
 ---
 layout: false
+
+The idea that you test your code with automated tests, that allow you to have confidence in your code by testing at the unit level or functional tests.
+
+---
+template: inverse
+
+## How many people currently do TDD?
+---
+template: inverse
+### Unless you write all your code and deploy immediately...you are testing.
+
+
+---
+
 ### The Promise
 1. Code Confidence
 1. Cleaner Code
 1. Faster Development
 1. Worry-free weekends 
+
 ---
-## How many people currently do TDD?
+### The Reality
+1. I believe it does help in code confidence
+    * However, your test may not account for each edge case and will pass, but doesn't mean it's 100%
+1. I think it does help in cleaner code, because you have to write code in a way that's testable. Often this keeps things a little simpler.
+1. I think it would help with development times
+    * But you have to compare time of writing tests and development with standard approach of development, troubleshooting and bug fixes.
+    * I think TDD helps to reduce troubleshooting and likelihood of bugs.
+1. If your tests are passing, then your weekend should be uninterrupted.
+
+--
+
+> Warning! Testing is a possible solution to these common development problems, but it isn't going to solve everything. It's a tool, not the path of enlightenment.
+---
+### Testing Frameworks in PHP
+
+1. PHPUnit - [https://phpunit.de/](https://phpunit.de/)
+1. PHPSpec - [http://www.phpspec.net/en/latest/](http://www.phpspec.net/en/latest/)
+1. Behat - [http://docs.behat.org/en/v3.0/](http://docs.behat.org/en/v3.0/)
+1. Codeception - [http://codeception.com/](http://codeception.com/)
+1. There are others, but these are the big ones.
 
 
+
+--
+### Mocking in PHP
+1. PHPUnit, has built in mocking
+1. Mockery - [http://docs.mockery.io/en/latest/](http://docs.mockery.io/en/latest/)
+1. Phake - [http://phake.readthedocs.io/en/2.1/](http://phake.readthedocs.io/en/2.1/)
+
+--
+
+Sometimes in testing, a package may be difficult to setup in order to use it in testing; or you don't want to rely on external dependencies. Mocking allows you to fake an object, and fake a method call and return values that you know an object should return.
+
+Mocking is a little tricky to really wrap your head around what it is, and when you should actually do it. To be honest, I can't really say that I am an expert on mocking, but it is a technique that you should be aware of when testing.
 
 ---
 layout: false
@@ -45,8 +91,6 @@ Slides: http://ahuggins.github.io/presentation-tdd/
     Slideshow created using http://github.com/gnab/remark
 ]
 
-???
-Mention Laracasts coupon code 30% off (if it still works)
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
     <script>
